@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/porsche-911-3d/' : '/',
   plugins: [react()],
   server: {
     port: 5173,
@@ -11,4 +12,4 @@ export default defineConfig({
     target: 'es2020',
     chunkSizeWarningLimit: 1500,
   },
-});
+}));
