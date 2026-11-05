@@ -5,7 +5,7 @@ import type { ThreeEvent } from '@react-three/fiber';
 import { useStore, PART_IDS, type PartId } from '../../state/store';
 import { ingestModel, registryReport, type Registry } from '../../lib/registry';
 
-export const MODEL_URL = '/models/911.glb';
+export const MODEL_URL = `${import.meta.env.BASE_URL}models/911.glb`;
 
 /** Latest ingest result — read by later milestones (paint, lights, calibration). */
 let activeRegistry: Registry | null = null;

@@ -3,8 +3,8 @@ import { useStore, type HdriId } from '../state/store';
 
 /** Local CC0 HDRIs (Poly Haven). 'studio' is the procedural rig below. */
 const HDRI_FILES: Record<Exclude<HdriId, 'studio'>, string> = {
-  warm: '/hdri/warm.hdr',
-  night: '/hdri/night.hdr',
+  warm: `${import.meta.env.BASE_URL}hdri/warm.hdr`,
+  night: `${import.meta.env.BASE_URL}hdri/night.hdr`,
 };
 
 function StudioRig() {
